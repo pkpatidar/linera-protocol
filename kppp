@@ -1,0 +1,10 @@
+Fix: User authentication issue on login
+
+This commit addresses a bug where users were unable to log in
+due to an incorrect handling of credentials during the authentication
+process. The previous implementation was failing to correctly
+validate hashed passwords against the stored user data.
+
+The fix involves updating the authentication logic to properly
+compare the provided password with the stored hash, ensuring
+successful login for legitimate users.
